@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Binomo_Clone.Pages.LoginOrSignUp"
+             BackgroundColor="#1b1b1e"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid RowDefinitions="*,auto,auto">
+            <Image Grid.Row="0" Margin="0,50,0,0"
+                   Source="binomoLogoHomescreen.png" Aspect="AspectFit" HeightRequest="110" 
+                   HorizontalOptions="Center" VerticalOptions="Center"/>
+            
+            <StackLayout Orientation="Horizontal" Grid.Row="1" Margin="20,0" VerticalOptions="End">
+                <Frame Style="{StaticResource normalFrame}" CornerRadius="10" Margin="0,0,10,0" Padding="0">
+                    <Label Text="Log In" Style="{StaticResource TitleBar}" 
+                           VerticalOptions="Center" HorizontalOptions="Center" FontSize="17"/>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="gotoLogin"/>
+                    </Frame.GestureRecognizers>                    
+                </Frame>
+                
+                <Frame Style="{StaticResource normalFrame}" CornerRadius="10" Padding="0"
+                       Margin="10,0,0,0">
+                    <Label Text="Sign Up" Style="{StaticResource TitleBar}" 
+                           VerticalOptions="Center" HorizontalOptions="Center" FontSize="17"/>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="gotoSignUp"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+            </StackLayout>
+
+            <Label Margin="30,20,30,30" Grid.Row="2" HorizontalTextAlignment="Center" LineHeight="1.2">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="I confirm that I'm adult and accept the terms of the" 
+                              TextColor="#57606f"/>
+                        <Span Text=" Client Agreement " TextColor="#a4b0be"/>
+                        <Span Text="and" TextColor="#57606f"/>
+                        <Span Text=" Privacy Policy" TextColor="#a4b0be"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

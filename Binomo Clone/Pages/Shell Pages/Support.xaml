@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Binomo_Clone.Pages.Shell_Pages.Support"
+             BackgroundColor="#1b1b1e"
+             Title="Support">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid RowDefinitions="auto,auto,auto,auto,auto,auto,auto" ColumnDefinitions="auto,*" Margin="20" 
+                  ColumnSpacing="30">
+                
+                <!--Help-->
+                <Image Grid.Row="0" Grid.Column="0" Source="help.png"
+                       HeightRequest="30" VerticalOptions="Center"/>
+                <Label Text="Help Center" Style="{StaticResource header2}"
+                       Grid.Column="1" Grid.Row="0" VerticalOptions="Center"/>
+                <Line X1="0" X2="300" Y1="0" Y2="0" Margin="-15,10,0,10" StrokeThickness="3"
+                      Grid.Column="1" Grid.Row="1" BackgroundColor="#303033"/>
+
+                <!--Chat-->
+                <Image Grid.Row="2" Grid.Column="0" Source="chat.png"
+                       HeightRequest="30" VerticalOptions="Center"/>
+                <Label Text="Chat" Style="{StaticResource header2}"
+                       Grid.Column="1" Grid.Row="2" VerticalOptions="Center"/>
+                <Line X1="0" X2="300" Y1="0" Y2="0" Margin="-15,10,0,10" StrokeThickness="3"
+                      Grid.Column="1" Grid.Row="3" BackgroundColor="#303033"/>
+                
+                <!--Contacts-->
+                <Image Grid.Row="4" Grid.Column="0" Source="contacts.png"
+                       HeightRequest="30" VerticalOptions="Center"/>
+                <Label Text="Contacts" Style="{StaticResource header2}"
+                       Grid.Column="1" Grid.Row="4" VerticalOptions="Center"/>
+                <Line X1="0" X2="300" Y1="0" Y2="0" Margin="-15,10,0,10" StrokeThickness="3"
+                      Grid.Column="1" Grid.Row="5" BackgroundColor="#303033"/>
+
+                <!--Client agreement-->
+                <Image Grid.Row="6" Grid.Column="0" Source="agreement.png"
+                       HeightRequest="30" VerticalOptions="Center"/>
+                <Label Text="Client Agreement" Style="{StaticResource header2}"
+                       Grid.Column="1" Grid.Row="6" VerticalOptions="Center"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

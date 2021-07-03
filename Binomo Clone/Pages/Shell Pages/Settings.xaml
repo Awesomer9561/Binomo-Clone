@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Binomo_Clone.Pages.Shell_Pages.Settings"
+             BackgroundColor="#1b1b1e" Title="Settings">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid RowDefinitions="auto,auto,auto" ColumnDefinitions="auto,*" Margin="20" 
+                  ColumnSpacing="30">
+                <Image Grid.Row="0" Grid.Column="0" Source="profile.png"
+                       HeightRequest="30" VerticalOptions="Center"/>
+                <StackLayout Grid.Row="0" Grid.Column="1">
+                    <Label Text="Profile" Style="{StaticResource header2}"/>
+                    <Label Text="pa7407071463@gmail.com" Style="{StaticResource desc}" CharacterSpacing="1"
+                           FontSize="13"/>
+                </StackLayout>
+
+                <Line X1="0" X2="300" Y1="0" Y2="0" Margin="-15,10,0,10" StrokeThickness="3"
+                      Grid.Column="1" Grid.Row="1" BackgroundColor="#303033"/>
+
+                <Image Grid.Row="2" Grid.Column="0" Source="like.png"
+                       HeightRequest="30" VerticalOptions="Center"/>
+                <Label Text="Rate the app" Style="{StaticResource header2}"
+                       Grid.Column="1" Grid.Row="2" VerticalOptions="Center"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,190 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Fonts\JosefinSans-Bold.ttf" />
+    <None Remove="Fonts\JosefinSans-BoldItalic.ttf" />
+    <None Remove="Fonts\JosefinSans-Italic.ttf" />
+    <None Remove="Fonts\JosefinSans-Light.ttf" />
+    <None Remove="Fonts\JosefinSans-LightItalic.ttf" />
+    <None Remove="Fonts\JosefinSans-Regular.ttf" />
+    <None Remove="Fonts\JosefinSans-SemiBold.ttf" />
+    <None Remove="Fonts\JosefinSans-SemiBoldItalic.ttf" />
+    <None Remove="Fonts\JosefinSans-Thin.ttf" />
+    <None Remove="Fonts\JosefinSans-ThinItalic.ttf" />
+    <None Remove="Fonts\Montserrat-Black.ttf" />
+    <None Remove="Fonts\Montserrat-BlackItalic.ttf" />
+    <None Remove="Fonts\Montserrat-Bold.ttf" />
+    <None Remove="Fonts\Montserrat-BoldItalic.ttf" />
+    <None Remove="Fonts\Montserrat-ExtraBold.ttf" />
+    <None Remove="Fonts\Montserrat-ExtraBoldItalic.ttf" />
+    <None Remove="Fonts\Montserrat-ExtraLight.ttf" />
+    <None Remove="Fonts\Montserrat-ExtraLightItalic.ttf" />
+    <None Remove="Fonts\Montserrat-Italic.ttf" />
+    <None Remove="Fonts\Montserrat-Light.ttf" />
+    <None Remove="Fonts\Montserrat-LightItalic.ttf" />
+    <None Remove="Fonts\Montserrat-Medium.ttf" />
+    <None Remove="Fonts\Montserrat-MediumItalic.ttf" />
+    <None Remove="Fonts\Montserrat-Regular.ttf" />
+    <None Remove="Fonts\Montserrat-SemiBold.ttf" />
+    <None Remove="Fonts\Montserrat-SemiBoldItalic.ttf" />
+    <None Remove="Fonts\Montserrat-Thin.ttf" />
+    <None Remove="Fonts\Montserrat-ThinItalic.ttf" />
+    <None Remove="Fonts\Pacifico.ttf" />
+    <None Remove="Fonts\Poppins-Black.otf" />
+    <None Remove="Fonts\Poppins-BlackItalic.otf" />
+    <None Remove="Fonts\Poppins-Bold.otf" />
+    <None Remove="Fonts\Poppins-BoldItalic.otf" />
+    <None Remove="Fonts\Poppins-ExtraBold.otf" />
+    <None Remove="Fonts\Poppins-ExtraBoldItalic.otf" />
+    <None Remove="Fonts\Poppins-ExtraLight.otf" />
+    <None Remove="Fonts\Poppins-ExtraLightItalic.otf" />
+    <None Remove="Fonts\Poppins-Italic.otf" />
+    <None Remove="Fonts\Poppins-Light.otf" />
+    <None Remove="Fonts\Poppins-LightItalic.otf" />
+    <None Remove="Fonts\Poppins-Medium.otf" />
+    <None Remove="Fonts\Poppins-MediumItalic.otf" />
+    <None Remove="Fonts\Poppins-Regular.otf" />
+    <None Remove="Fonts\Poppins-SemiBold.otf" />
+    <None Remove="Fonts\Poppins-SemiBoldItalic.otf" />
+    <None Remove="Fonts\Poppins-Thin.otf" />
+    <None Remove="Fonts\Poppins-ThinItalic.otf" />
+    <None Remove="Fonts\Roboto-Black.ttf" />
+    <None Remove="Fonts\Roboto-BlackItalic.ttf" />
+    <None Remove="Fonts\Roboto-Bold.ttf" />
+    <None Remove="Fonts\Roboto-BoldItalic.ttf" />
+    <None Remove="Fonts\Roboto-Italic.ttf" />
+    <None Remove="Fonts\Roboto-Light.ttf" />
+    <None Remove="Fonts\Roboto-LightItalic.ttf" />
+    <None Remove="Fonts\Roboto-Medium.ttf" />
+    <None Remove="Fonts\Roboto-MediumItalic.ttf" />
+    <None Remove="Fonts\Roboto-Regular.ttf" />
+    <None Remove="Fonts\Roboto-Thin.ttf" />
+    <None Remove="Fonts\Roboto-ThinItalic.ttf" />
+    <None Remove="Fonts\RobotoCondensed-Bold.ttf" />
+    <None Remove="Fonts\RobotoCondensed-BoldItalic.ttf" />
+    <None Remove="Fonts\RobotoCondensed-Italic.ttf" />
+    <None Remove="Fonts\RobotoCondensed-Light.ttf" />
+    <None Remove="Fonts\RobotoCondensed-LightItalic.ttf" />
+    <None Remove="Fonts\RobotoCondensed-Regular.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Fonts\JosefinSans-Bold.ttf" />
+    <EmbeddedResource Include="Fonts\JosefinSans-BoldItalic.ttf" />
+    <EmbeddedResource Include="Fonts\JosefinSans-Italic.ttf" />
+    <EmbeddedResource Include="Fonts\JosefinSans-Light.ttf" />
+    <EmbeddedResource Include="Fonts\JosefinSans-LightItalic.ttf" />
+    <EmbeddedResource Include="Fonts\JosefinSans-Regular.ttf" />
+    <EmbeddedResource Include="Fonts\JosefinSans-SemiBold.ttf" />
+    <EmbeddedResource Include="Fonts\JosefinSans-SemiBoldItalic.ttf" />
+    <EmbeddedResource Include="Fonts\JosefinSans-Thin.ttf" />
+    <EmbeddedResource Include="Fonts\JosefinSans-ThinItalic.ttf" />
+    <EmbeddedResource Include="Fonts\Montserrat-Black.ttf" />
+    <EmbeddedResource Include="Fonts\Montserrat-BlackItalic.ttf" />
+    <EmbeddedResource Include="Fonts\Montserrat-Bold.ttf" />
+    <EmbeddedResource Include="Fonts\Montserrat-BoldItalic.ttf" />
+    <EmbeddedResource Include="Fonts\Montserrat-ExtraBold.ttf" />
+    <EmbeddedResource Include="Fonts\Montserrat-ExtraBoldItalic.ttf" />
+    <EmbeddedResource Include="Fonts\Montserrat-ExtraLight.ttf" />
+    <EmbeddedResource Include="Fonts\Montserrat-ExtraLightItalic.ttf" />
+    <EmbeddedResource Include="Fonts\Montserrat-Italic.ttf" />
+    <EmbeddedResource Include="Fonts\Montserrat-Light.ttf" />
+    <EmbeddedResource Include="Fonts\Montserrat-LightItalic.ttf" />
+    <EmbeddedResource Include="Fonts\Montserrat-Medium.ttf" />
+    <EmbeddedResource Include="Fonts\Montserrat-MediumItalic.ttf" />
+    <EmbeddedResource Include="Fonts\Montserrat-Regular.ttf" />
+    <EmbeddedResource Include="Fonts\Montserrat-SemiBold.ttf" />
+    <EmbeddedResource Include="Fonts\Montserrat-SemiBoldItalic.ttf" />
+    <EmbeddedResource Include="Fonts\Montserrat-Thin.ttf" />
+    <EmbeddedResource Include="Fonts\Montserrat-ThinItalic.ttf" />
+    <EmbeddedResource Include="Fonts\Pacifico.ttf" />
+    <EmbeddedResource Include="Fonts\Poppins-Black.otf" />
+    <EmbeddedResource Include="Fonts\Poppins-BlackItalic.otf" />
+    <EmbeddedResource Include="Fonts\Poppins-Bold.otf" />
+    <EmbeddedResource Include="Fonts\Poppins-BoldItalic.otf" />
+    <EmbeddedResource Include="Fonts\Poppins-ExtraBold.otf" />
+    <EmbeddedResource Include="Fonts\Poppins-ExtraBoldItalic.otf" />
+    <EmbeddedResource Include="Fonts\Poppins-ExtraLight.otf" />
+    <EmbeddedResource Include="Fonts\Poppins-ExtraLightItalic.otf" />
+    <EmbeddedResource Include="Fonts\Poppins-Italic.otf" />
+    <EmbeddedResource Include="Fonts\Poppins-Light.otf" />
+    <EmbeddedResource Include="Fonts\Poppins-LightItalic.otf" />
+    <EmbeddedResource Include="Fonts\Poppins-Medium.otf" />
+    <EmbeddedResource Include="Fonts\Poppins-MediumItalic.otf" />
+    <EmbeddedResource Include="Fonts\Poppins-Regular.otf" />
+    <EmbeddedResource Include="Fonts\Poppins-SemiBold.otf" />
+    <EmbeddedResource Include="Fonts\Poppins-SemiBoldItalic.otf" />
+    <EmbeddedResource Include="Fonts\Poppins-Thin.otf" />
+    <EmbeddedResource Include="Fonts\Poppins-ThinItalic.otf" />
+    <EmbeddedResource Include="Fonts\Roboto-Black.ttf" />
+    <EmbeddedResource Include="Fonts\Roboto-BlackItalic.ttf" />
+    <EmbeddedResource Include="Fonts\Roboto-Bold.ttf" />
+    <EmbeddedResource Include="Fonts\Roboto-BoldItalic.ttf" />
+    <EmbeddedResource Include="Fonts\Roboto-Italic.ttf" />
+    <EmbeddedResource Include="Fonts\Roboto-Light.ttf" />
+    <EmbeddedResource Include="Fonts\Roboto-LightItalic.ttf" />
+    <EmbeddedResource Include="Fonts\Roboto-Medium.ttf" />
+    <EmbeddedResource Include="Fonts\Roboto-MediumItalic.ttf" />
+    <EmbeddedResource Include="Fonts\Roboto-Regular.ttf" />
+    <EmbeddedResource Include="Fonts\Roboto-Thin.ttf" />
+    <EmbeddedResource Include="Fonts\Roboto-ThinItalic.ttf" />
+    <EmbeddedResource Include="Fonts\RobotoCondensed-Bold.ttf" />
+    <EmbeddedResource Include="Fonts\RobotoCondensed-BoldItalic.ttf" />
+    <EmbeddedResource Include="Fonts\RobotoCondensed-Italic.ttf" />
+    <EmbeddedResource Include="Fonts\RobotoCondensed-Light.ttf" />
+    <EmbeddedResource Include="Fonts\RobotoCondensed-LightItalic.ttf" />
+    <EmbeddedResource Include="Fonts\RobotoCondensed-Regular.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+    <PackageReference Include="Xamarin.Forms.PancakeView" Version="2.3.0.759" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Mono.Android">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\ReferenceAssemblies\Microsoft\Framework\MonoAndroid\v11.0\Mono.Android.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Pages\LoadingScreen.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\LoginorSignUp\Login.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\LoginorSignUp\LoginOrSignUp.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\Shell Pages\HomePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\Shell Pages\Settings.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\Shell Pages\Support.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\Shell Pages\Trades.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\ShellHomePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\LoginorSignUp\SignUp.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

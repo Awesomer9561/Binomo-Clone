@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Binomo_Clone.Pages.Shell_Pages.HomePage"
+             xmlns:pancake ="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             Shell.NavBarIsVisible="False">
+    
+    <ContentPage.Resources>
+       
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#1b1b1e">
+            
+            <!-- Title Bar -->
+            <StackLayout Style="{StaticResource forground}">
+                <Grid ColumnDefinitions="*,*,*" Margin="10,0" 
+                  HeightRequest="50" >
+
+                    <!--Hambuger Menu-->
+                    <StackLayout Grid.Column="0" VerticalOptions="Center" Padding="0">
+                        <Image Source="menu" HorizontalOptions="Start"
+                           Aspect="Fill" HeightRequest="35" WidthRequest="30">
+                            <Image.GestureRecognizers >
+                                <TapGestureRecognizer Tapped="openFlyout"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </StackLayout>
+
+                    <!--Center Text-->
+                    <StackLayout Grid.Column="1" Margin="-15,0,0,0" 
+                                 HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
+                        <Label Text="CFD" Style="{StaticResource TitleBar}" Opacity="0.5" 
+                               Margin="0,0,0,-5" FontSize="12.5"/>
+                        <Label Text="GOLD (CFD)" Style="{StaticResource TitleBar}"
+                               FontSize="17"/>
+                    </StackLayout>
+
+                    <!--Right Refresh View-->
+                    <Frame Grid.Column="2" HeightRequest="50" Padding="0" BackgroundColor="Transparent">
+                        <Grid RowDefinitions="auto,auto" ColumnDefinitions="*,auto" 
+                              ColumnSpacing="20" RowSpacing="1"
+                              VerticalOptions="Center" HorizontalOptions="End">
+                            <Label Grid.Row="0" Grid.Column="0" Text="Demo Account" FontSize="12.5"
+                                   Style="{StaticResource TitleBar}" Opacity="0.5"/>
+                            <Label Grid.Row="1" Grid.Column="0" Text="$ 1000" 
+                                   Style="{StaticResource TitleBar}" FontSize="17"/>
+
+                            <Image Grid.Column="1" Grid.RowSpan="2" x:Name="refreshBtn"
+                               Source="refresh.png" VerticalOptions="Center" 
+                               HeightRequest="25" Aspect="AspectFit">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="refreshAmount"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                        </Grid>
+                    </Frame>
+                </Grid>
+            </StackLayout>
+
+            <!-- Frames -->
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,10,0,0">
+                <Frame Style="{StaticResource normalFrame}" Margin="15,0,5,0">
+                    <StackLayout Margin="0,0,0,0" 
+                                 HorizontalOptions="Start" VerticalOptions="Center">
+                        <Label Text="CFD" Style="{StaticResource TitleBar}" Opacity="0.5"
+                               Margin="0,0,0,-5" FontSize="15"/>
+                        <Label Text="GOLD (CFD)" Style="{StaticResource TitleBar}"
+                               FontSize="20"/>
+                    </StackLayout>
+                </Frame>
+                <Frame Style="{StaticResource normalFrame}" Margin="5,0,15,0">
+                    <StackLayout HorizontalOptions="Start" VerticalOptions="Center">
+                        <Label Grid.Row="0" Grid.Column="0" Text="Demo Account" FontSize="15"
+                                   Style="{StaticResource TitleBar}"  Opacity="0.5"/>
+                        <Label Grid.Row="1" Grid.Column="0" Text="$ 1000" Margin="0,-5,0,0" 
+                                   Style="{StaticResource TitleBar}" FontSize="22"/>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+
+            <!-- Chart -->
+            <Frame HeightRequest="450" Padding="0" 
+                   Margin="15,0" BackgroundColor="Transparent">
+                <Image Source="trading2.png" Aspect="AspectFit"/>
+            </Frame>
+            
+            <!-- Empty Frames -->
+            <Grid ColumnDefinitions="*,*" Margin="0,10,0,0">
+                <Frame Style="{StaticResource normalFrame}" Grid.Column="0" Margin="15,0,5,0"/>
+                <Frame Style="{StaticResource normalFrame}" Grid.Column="1" Margin="5,0,15,0"/>
+            </Grid>
+
+            <!-- 2nd grid for frames -->
+            <Grid ColumnDefinitions="*,*" RowDefinitions="auto,auto" Margin="0,10,0,0" >
+                <!--Commission Rate-->
+                <Label Text="Commission: 0.02%" Grid.Column="1" Grid.Row="0" 
+                       FontSize="13" Opacity="0.5" FontFamily="RMed" CharacterSpacing="0.5"
+                       Style="{StaticResource TitleBar}" HorizontalOptions="Center"/>
+
+                <!--PancakeView-->
+                <Grid ColumnDefinitions="*,*" Grid.Column="0" Grid.Row="1" Margin="15,0,0,0">
+                    <pancake:PancakeView Grid.Column="0" x:Name="greenArrow"
+                                         HeightRequest="60" WidthRequest="100" Padding="0"
+                                         BackgroundColor="#20bf6b" 
+                                         CornerRadius="15,0,15,0" Margin="0,0,0.5,0">
+                        <Image Source="arrow.png" HeightRequest="20" 
+                               Aspect="AspectFit" 
+                               VerticalOptions="Center" HorizontalOptions="Center"/>
+
+                        <pancake:PancakeView.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="activeGreenArrow"/>
+                        </pancake:PancakeView.GestureRecognizers>
+                    </pancake:PancakeView>
+            
+                    <pancake:PancakeView Grid.Column="1" x:Name="redArrow"
+                                         HeightRequest="60" WidthRequest="100" 
+                                         Padding="0" BackgroundColor="#303033"
+                                         CornerRadius="0,15,0,15" Margin="0.5,0,0,0">
+                        <Image Source="arrow.png" HeightRequest="20" 
+                               Aspect="AspectFit" Rotation="180"
+                               VerticalOptions="Center" HorizontalOptions="Center"/>
+                        <pancake:PancakeView.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="activeRedArrow"/>
+                        </pancake:PancakeView.GestureRecognizers>
+                    </pancake:PancakeView>
+                </Grid>
+                
+                <!--Open trade-->
+                <Frame Style="{StaticResource normalFrame}" Grid.Column="1" Grid.Row="1" Padding="0"
+                       CornerRadius="15" Margin="5,0,15,0" BackgroundColor="#20bf6b">
+                    <Label Text="Open Trade" Style="{StaticResource TitleBar}"
+                           FontSize="22" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                           Margin="0,-3,0,0" FontFamily="RBold"/>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="gotoLogin"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+            </Grid>
+            
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Binomo_Clone.Pages.LoadingScreen"
+             BackgroundColor="#1b1b1e">
+    <ContentPage.Content>
+        <Grid RowDefinitions="*,auto,auto">
+            <Image Grid.Row="0" Source="binomoLogoHomescreen.png" Aspect="AspectFit"
+                   HeightRequest="110" VerticalOptions="Center" HorizontalOptions="Center"/>
+
+            <ActivityIndicator Grid.Row="1" x:Name="loadingAnimation" 
+                               Color="#f6b93b" IsRunning="true"/>
+            
+            <StackLayout Grid.Row="2" HorizontalOptions="Center" Margin="0,20">
+                <Label Style="{StaticResource TitleBar}" FontSize="15">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Licenses" TextColor="#a4b0be"/>
+                            <Span Text=" and " TextColor="#57606f"/>
+                            <Span Text="Certificates" TextColor="#a4b0be"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label Text="Version 4.12.5.1 -1" TextColor="#57606f"
+                       HorizontalTextAlignment="Center" Style="{StaticResource TitleBar}"
+                       FontSize="15"/>
+            </StackLayout>        
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

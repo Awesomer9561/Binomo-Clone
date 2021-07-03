@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:shell="clr-namespace:Binomo_Clone.Pages.Shell_Pages"
+             x:Class="Binomo_Clone.Pages.ShellHomePage">
+
+    <Shell.Resources>
+       
+    </Shell.Resources>
+    
+    
+    <ShellContent Title="Home" Icon="settingsIcon.png" 
+                 ContentTemplate="{DataTemplate shell:HomePage}"/>
+    <ShellContent Title="Trades" Icon="tradeIcon.png" 
+                 ContentTemplate="{DataTemplate shell:Trades}"/>
+    <ShellContent Title="Support" Icon="supportIcon.png" 
+                 ContentTemplate="{DataTemplate shell:Support}"/>
+    <ShellContent Title="Settings" Icon="settingsIcon.png" 
+                 ContentTemplate="{DataTemplate shell:Settings}">
+    </ShellContent>
+</Shell>

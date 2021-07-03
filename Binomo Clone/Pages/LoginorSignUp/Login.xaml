@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="#1b1b1e"
+             NavigationPage.HasNavigationBar="True"
+             x:Class="Binomo_Clone.Pages.Login"
+             Title="Log In">
+    
+    <ContentPage.Content>
+        <Grid BackgroundColor="Transparent" RowDefinitions="*,*,*">
+            <Image Grid.Row="0" Margin="0,20,0,0"
+                   Source="binomoLogoHomescreen.png" Aspect="AspectFit" HeightRequest="140" 
+                   HorizontalOptions="Center" VerticalOptions="Center"/>
+
+            <StackLayout Grid.Row="1" VerticalOptions="Center">
+                <Frame Style="{StaticResource normalFrame}" CornerRadius="10" Padding="15,5"
+                       Margin="20,0,20,10" HeightRequest="50" VerticalOptions="Center">
+                    <Entry Placeholder="Email" PlaceholderColor="#a4b0be"
+                           x:Name="email"
+                       Keyboard="Email" VerticalOptions="Center"/>
+                </Frame>
+                <Frame Style="{StaticResource normalFrame}" CornerRadius="10" Padding="15,5"
+                       Margin="20,0" HeightRequest="50">
+                    <Entry Placeholder="Password" PlaceholderColor="#a4b0be"
+                           x:Name="password"
+                       IsPassword="True" VerticalOptions="Center"/>
+                </Frame>
+            </StackLayout>
+
+
+            <StackLayout Grid.Row="2" VerticalOptions="EndAndExpand" Margin="0,0,0,20">
+                <Frame Style="{StaticResource normalFrame}" CornerRadius="10" Padding="15,5"
+                       Margin="20,0,20,10" HeightRequest="50" VerticalOptions="Center"
+                       BackgroundColor="#f6b93b">
+                    <Label Text="Log In" Style="{StaticResource TitleBar}"
+                           TextColor="Black" FontSize="20"
+                           VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="LoginUser"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <Frame Style="{StaticResource normalFrame}" CornerRadius="10" Padding="15,5"
+                       Margin="20,0" HeightRequest="50">
+                    <Label Text="Reset Password" Style="{StaticResource TitleBar}"
+                           TextColor="White" FontSize="20"
+                           VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="resetpass"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

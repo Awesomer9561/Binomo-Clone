@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Binomo_Clone.Pages.Shell_Pages.Trades"
+             Title="Trades" BackgroundColor="#1b1b1e"
+             NavigationPage.HasNavigationBar="True"
+             Shell.NavBarIsVisible="True">
+
+    <ContentPage.Resources>
+        
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            
+            <Grid RowDefinitions="50" ColumnDefinitions="*,*" ColumnSpacing="-10"
+                  Margin="20,10" x:Name="tradeTabs">
+
+
+                <BoxView HeightRequest="50" Grid.ColumnSpan="2"
+                     CornerRadius="15" BackgroundColor="#303033"/>
+                <Frame BackgroundColor="#f6b93b" x:Name="activeTab" 
+                       HeightRequest="50" CornerRadius="15"/>
+
+
+                <Frame BackgroundColor="Transparent" Padding="0"
+                       HasShadow="False" Grid.Column="0" Grid.Row="0">
+                    <Label Text="Standard" x:Name="Standard"
+                       Style="{StaticResource TitleBar}" TextColor="Black" FontSize="15"
+                       HorizontalOptions="Center" VerticalOptions="Center"/>
+
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="activeStandard"/>
+                    </Frame.GestureRecognizers>
+
+                </Frame>
+
+                <Frame BackgroundColor="Transparent" Padding="0" 
+                       HasShadow="False" Grid.Column="1" Grid.Row="0">
+                    <Label Text="CFD" x:Name="CFD"
+                       Style="{StaticResource TitleBar}" FontSize="15"
+                       HorizontalOptions="Center" VerticalOptions="Center"/>
+
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="activeCFD"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+            </Grid>
+
+            <ContentView x:Name="StandardView" Margin="20" IsVisible="true">
+                <StackLayout >
+                    <Image Source="money.png" HeightRequest="100" VerticalOptions="Center" 
+                           Margin="0,100,0,0" HorizontalOptions="Center" Aspect="AspectFit"/>
+
+                    <Label Text="See trade results here. It's all upto you. Good luck!" 
+                           TextColor="White" FontSize="17" HorizontalTextAlignment="Center" 
+                           Style="{StaticResource TitleBar}" Margin="20"/>
+                </StackLayout>
+            </ContentView>
+
+            <ScrollView x:Name="CFDView" Margin="20" IsVisible="false">
+                <StackLayout>
+                    
+                    <!-- Open trades -->
+                    <Label Text="Open trades" HorizontalOptions="Start"
+                           Style="{StaticResource header}" FontSize="20"/>
+
+                    <!--Income/ Investment-->
+                    <Grid RowDefinitions="auto,auto" ColumnDefinitions="*,*"
+                          Margin="0,20,10,0">
+                        <!-- Income -->
+                        <Label Text="Income" Style="{StaticResource header}" 
+                               Grid.Row="0" Grid.Column="0"/>
+                        
+                        <Label Grid.Row="0" Grid.Column="1" Style="{StaticResource header}"
+                               TextColor="#f6b93b" HorizontalTextAlignment="End">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="₹  "/>
+                                    <Span Text="6,599.74" FontSize="19"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        
+                        <!-- investments -->
+                        <Label Text="Investments" Style="{StaticResource desc}" 
+                               Grid.Row="1" Grid.Column="0"/>
+
+                        <Label Grid.Row="1" Grid.Column="1" Style="{StaticResource desc}"
+                               HorizontalTextAlignment="End">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="₹  "/>
+                                    <Span Text="7,000.00" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </Grid>
+                    
+                    <!-- Cards -->
+                    <CollectionView x:Name="investmentList" ItemsLayout="VerticalList">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout>
+                                    <!-- Frame -->
+                                    <Frame CornerRadius="10" HeightRequest="150"
+                                       Margin="0,10" Padding="0" BackgroundColor="#303033">
+                                        <StackLayout>
+                                            <!-- Investment Tab -->
+                                            <Grid RowDefinitions="auto,auto" ColumnDefinitions="auto,*,*"
+                                              Padding="10" Margin="0,10,10,0">
+
+                                                <!--Image-->
+                                                <Image Source="{Binding InvestImage}" Aspect="AspectFit"
+                                               HeightRequest="50" Grid.Column="0" Grid.RowSpan="2"/>
+
+
+                                                <!-- Name -->
+                                                <Label Text="{Binding Name}" Style="{StaticResource header}" 
+                                               Grid.Row="0" Grid.Column="1"/>
+                                                <!-- Income -->
+                                                <Label Grid.Row="0" Grid.Column="2" Style="{StaticResource header}"
+                                               HorizontalTextAlignment="End">
+                                                    <Label.FormattedText>
+                                                        <FormattedString>
+                                                            <Span Text="₹  "/>
+                                                            <Span Text="6,599.74" FontSize="19"/>
+                                                        </FormattedString>
+                                                    </Label.FormattedText>
+                                                </Label>
+
+                                                <!-- points -->
+                                                <StackLayout Orientation="Horizontal"  Grid.Row="1" Grid.Column="1">
+                                                    <Image Source="arrow.png" HeightRequest="10" 
+                                                   VerticalOptions="Center"/>
+                                                    <Label Text="1778.195" Style="{StaticResource desc}" />
+                                                </StackLayout>
+                                                <!-- multiplier -->
+                                                <Label Grid.Row="1" Grid.Column="2" Style="{StaticResource desc}"
+                                               HorizontalTextAlignment="End">
+                                                    <Label.FormattedText>
+                                                        <FormattedString>
+                                                            <Span Text="₹  "/>
+                                                            <Span Text="3,500.00" />
+                                                            <Span Text=" × 1"/>
+                                                        </FormattedString>
+                                                    </Label.FormattedText>
+                                                </Label>
+                                            </Grid>
+
+                                            <!-- Close btn -->
+                                            <Frame Margin="20,10,20,0" BorderColor="White" CornerRadius="5"
+                                              Padding="0" HeightRequest="40" BackgroundColor="#303033">
+                                                <Label Text="Close" Style="{StaticResource header}" FontSize="15"
+                                                   HorizontalOptions="Center" VerticalOptions="Center"/>
+                                            </Frame>
+                                        </StackLayout>
+                                    </Frame>
+                                </StackLayout>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </StackLayout>
+            </ScrollView>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

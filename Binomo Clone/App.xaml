@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Binomo_Clone.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label" x:Key="TitleBar">
+                <Setter Property="FontFamily" Value="RMed"/>
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+            <Style TargetType="Label" x:Key="header">
+                <Setter Property="FontFamily" Value="RMed"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontSize" Value="20"/>
+            </Style>
+            <Style TargetType="Label" x:Key="header2">
+                <Setter Property="FontFamily" Value="RReg"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontSize" Value="20"/>
+            </Style>
+
+            <Style TargetType="Label" x:Key="desc">
+                <Setter Property="FontFamily" Value="RReg"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="Opacity" Value="0.7"/>
+                <Setter Property="FontSize" Value="16"/>
+            </Style>
+            
+            
+
+            <Style TargetType="StackLayout" x:Key="forground">
+                <Setter Property="BackgroundColor" Value="#303033"/>
+            </Style>
+            <Style TargetType="Frame" x:Key="normalFrame">
+                <Setter Property="HeightRequest" Value="60"/>
+                <Setter Property="WidthRequest" Value="200"/>
+                <Setter Property="BackgroundColor" Value="#303033"/>
+                <Setter Property="Padding" Value="15,0,0,0"/>
+                <Setter Property="CornerRadius" Value="5"/>
+            </Style>
+            
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
