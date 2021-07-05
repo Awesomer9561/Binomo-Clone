@@ -1,8 +1,5 @@
 ﻿using Binomo_Clone.Pages;
-using Binomo_Clone.Pages.Shell_Pages;
-using System;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace Binomo_Clone
 {
@@ -12,10 +9,11 @@ namespace Binomo_Clone
         {
             InitializeComponent();
 
-            //App.Current.MainPage = new ShellHomePage();
+            App.Current.MainPage = new ShellHomePage();
             //MainPage = new NavigationPage(new LoginOrSignUp());
             //App.Current.MainPage = new NavigationPage(new Support());
-            MainPage = new NavigationPage(new LoadingScreen());
+            //MainPage = new NavigationPage(new LoadingScreen());
+            
         }
 
         protected override void OnStart()

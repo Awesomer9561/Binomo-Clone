@@ -2,10 +2,27 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Binomo_Clone.Pages.Shell_Pages.Settings"
-             BackgroundColor="#1b1b1e" Title="Settings">
+             BackgroundColor="#1b1b1e" Title="Settings"
+             Shell.NavBarIsVisible="False">
 
     <ContentPage.Content>
         <StackLayout>
+            <!--Header-->
+            <StackLayout Orientation="Horizontal" Style="{StaticResource forground}"
+                         HeightRequest="50">
+                <Image Source="menu" HorizontalOptions="Start" Margin="20,0"
+                       Aspect="AspectFit" HeightRequest="30" >
+                    <Image.GestureRecognizers >
+                        <TapGestureRecognizer Tapped="openFlyout"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Label Text="Settings" FontSize="25" TextColor="White" 
+                       VerticalOptions="Center"/>
+            </StackLayout>
+
+
+
             <Grid RowDefinitions="auto,auto,auto" ColumnDefinitions="auto,*" Margin="20" 
                   ColumnSpacing="30">
                 <Image Grid.Row="0" Grid.Column="0" Source="profile.png"

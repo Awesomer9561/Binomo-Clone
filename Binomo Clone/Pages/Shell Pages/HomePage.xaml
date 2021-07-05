@@ -19,9 +19,9 @@
 
                     <!--Hambuger Menu-->
                     <StackLayout Grid.Column="0" VerticalOptions="Center" Padding="0">
-                        <Image Source="menu" HorizontalOptions="Start"
-                           Aspect="Fill" HeightRequest="35" WidthRequest="30">
-                            <Image.GestureRecognizers >
+                        <Image Source="menu" HorizontalOptions="Start" Margin="10,0,0,0"
+                           Aspect="AspectFit" HeightRequest="30">
+                            <Image.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="openFlyout"/>
                             </Image.GestureRecognizers>
                         </Image>
@@ -47,7 +47,7 @@
                                    Style="{StaticResource TitleBar}" FontSize="17"/>
 
                             <Image Grid.Column="1" Grid.RowSpan="2" x:Name="refreshBtn"
-                               Source="refresh.png" VerticalOptions="Center" 
+                               Source="refresh" VerticalOptions="Center" 
                                HeightRequest="25" Aspect="AspectFit">
                                 <Image.GestureRecognizers>
                                     <TapGestureRecognizer Tapped="refreshAmount"/>

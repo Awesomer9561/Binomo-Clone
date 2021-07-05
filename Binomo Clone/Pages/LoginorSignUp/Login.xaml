@@ -12,6 +12,8 @@
                    Source="binomoLogoHomescreen.png" Aspect="AspectFit" HeightRequest="140" 
                    HorizontalOptions="Center" VerticalOptions="Center"/>
 
+            
+            <!-- email and pass -->
             <StackLayout Grid.Row="1" VerticalOptions="Center">
                 <Frame Style="{StaticResource normalFrame}" CornerRadius="10" Padding="15,5"
                        Margin="20,0,20,10" HeightRequest="50" VerticalOptions="Center">
@@ -27,7 +29,7 @@
                 </Frame>
             </StackLayout>
 
-
+            <!-- Login or Reset Pass -->
             <StackLayout Grid.Row="2" VerticalOptions="EndAndExpand" Margin="0,0,0,20">
                 <Frame Style="{StaticResource normalFrame}" CornerRadius="10" Padding="15,5"
                        Margin="20,0,20,10" HeightRequest="50" VerticalOptions="Center"

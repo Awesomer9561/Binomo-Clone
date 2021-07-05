@@ -14619,43 +14619,46 @@ namespace Binomo_Clone.Droid
 			public const int notify_panel_notification_icon_bg = 2131165370;
 			
 			// aapt resource value: 0x7F0700BB
-			public const int profile = 2131165371;
+			public const int off = 2131165371;
 			
 			// aapt resource value: 0x7F0700BC
-			public const int refresh = 2131165372;
+			public const int profile = 2131165372;
 			
 			// aapt resource value: 0x7F0700BD
-			public const int settingsIcon = 2131165373;
+			public const int refresh = 2131165373;
 			
 			// aapt resource value: 0x7F0700BE
-			public const int settingsIconYellow = 2131165374;
+			public const int settingsIcon = 2131165374;
 			
 			// aapt resource value: 0x7F0700BF
-			public const int supportIcon = 2131165375;
+			public const int settingsIconYellow = 2131165375;
 			
 			// aapt resource value: 0x7F0700C0
-			public const int supportIconYellow = 2131165376;
+			public const int supportIcon = 2131165376;
 			
 			// aapt resource value: 0x7F0700C1
-			public const int test_custom_background = 2131165377;
+			public const int supportIconYellow = 2131165377;
 			
 			// aapt resource value: 0x7F0700C2
-			public const int tooltip_frame_dark = 2131165378;
+			public const int test_custom_background = 2131165378;
 			
 			// aapt resource value: 0x7F0700C3
-			public const int tooltip_frame_light = 2131165379;
+			public const int tooltip_frame_dark = 2131165379;
 			
 			// aapt resource value: 0x7F0700C4
-			public const int tradeicon = 2131165380;
+			public const int tooltip_frame_light = 2131165380;
 			
 			// aapt resource value: 0x7F0700C5
-			public const int tradeiconYellow = 2131165381;
+			public const int tradeicon = 2131165381;
 			
 			// aapt resource value: 0x7F0700C6
-			public const int trading = 2131165382;
+			public const int tradeiconYellow = 2131165382;
 			
 			// aapt resource value: 0x7F0700C7
-			public const int trading2 = 2131165383;
+			public const int trading = 2131165383;
+			
+			// aapt resource value: 0x7F0700C8
+			public const int trading2 = 2131165384;
 			
 			static Drawable()
 			{

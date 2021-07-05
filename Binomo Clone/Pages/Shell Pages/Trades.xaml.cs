@@ -103,5 +103,10 @@ namespace Binomo_Clone.Pages.Shell_Pages
             CFDView.IsVisible = false;
             StandardView.IsVisible = true;
         }
+
+        private void openFlyout(object sender, EventArgs e)
+        {
+            Shell.Current.FlyoutIsPresented = true;
+        }
     }
 }

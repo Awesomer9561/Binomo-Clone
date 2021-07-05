@@ -16,5 +16,10 @@ namespace Binomo_Clone.Pages.Shell_Pages
         {
             InitializeComponent();
         }
+
+        private void openFlyout(object sender, EventArgs e)
+        {
+            Shell.Current.FlyoutIsPresented = true;
+        }
     }
 }

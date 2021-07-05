@@ -2,20 +2,155 @@
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:shell="clr-namespace:Binomo_Clone.Pages.Shell_Pages"
-             x:Class="Binomo_Clone.Pages.ShellHomePage">
+             x:Class="Binomo_Clone.Pages.ShellHomePage"
+             FlyoutWidth="300"
+             FlyoutBackgroundColor="#1b1b1e">
 
     <Shell.Resources>
-       
+        <ResourceDictionary>
+        </ResourceDictionary>
     </Shell.Resources>
+
+    <FlyoutItem Title="Home">
+        <Shell.ItemTemplate>
+            <DataTemplate>
+                <Grid ColumnDefinitions="auto,*" Padding="15,10" 
+                      ColumnSpacing="20" HeightRequest="50">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroupList>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal" />
+                                <VisualState x:Name="Selected">
+                                    <VisualState.Setters>
+                                        <Setter Property="BackgroundColor" Value="white"/>
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateGroupList>
+                    </VisualStateManager.VisualStateGroups>
+                    <Frame BackgroundColor="#1b1b1e" Grid.ColumnSpan="2" 
+                           Margin="-5" CornerRadius="15"/>
+                    <Image Grid.Column="0" Margin="20,0,0,0" HeightRequest="25" 
+                           Source="tradeIcon.png" VerticalOptions="Center"/>
+                    <Label Text="Home" Grid.Column="1" VerticalOptions="Center" 
+                           Style="{StaticResource header}"/>
+                </Grid>
+            </DataTemplate>
+        </Shell.ItemTemplate>
+        <shell:HomePage/>
+    </FlyoutItem>
+    
+    <FlyoutItem Title="Trades">
+        <Shell.ItemTemplate>
+            <DataTemplate>
+                <Grid ColumnDefinitions="auto,*" Padding="15,10" 
+                      ColumnSpacing="20" HeightRequest="50">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroupList>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal" />
+                                <VisualState x:Name="Selected">
+                                    <VisualState.Setters>
+                                        <Setter Property="BackgroundColor" Value="white"/>
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateGroupList>
+                    </VisualStateManager.VisualStateGroups>
+                    <Frame BackgroundColor="#1b1b1e" Grid.ColumnSpan="2" 
+                           Margin="-5" CornerRadius="15"/>
+                    <Image Grid.Column="0" Margin="20,0,0,0" HeightRequest="25" 
+                           Source="tradeIcon.png" VerticalOptions="Center"/>
+                    <Label Text="Trades" Grid.Column="1" VerticalOptions="Center" 
+                           Style="{StaticResource header}"/>
+                </Grid>
+            </DataTemplate>
+        </Shell.ItemTemplate>
+        
+        <shell:Trades/>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Support">
+        <Shell.ItemTemplate>
+            <DataTemplate>
+                <Grid ColumnDefinitions="auto,*" Padding="15,10" 
+                      ColumnSpacing="20" HeightRequest="50">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroupList>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal" />
+                                <VisualState x:Name="Selected">
+                                    <VisualState.Setters>
+                                        <Setter Property="BackgroundColor" Value="white"/>
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateGroupList>
+                    </VisualStateManager.VisualStateGroups>
+                    <Frame BackgroundColor="#1b1b1e" Grid.ColumnSpan="2" 
+                           Margin="-5" CornerRadius="15"/>
+                    <Image Grid.Column="0" Margin="20,0,0,0" HeightRequest="25" 
+                           Source="supportIcon.png" VerticalOptions="Center"/>
+                    <Label Text="Support" Grid.Column="1" VerticalOptions="Center" 
+                           Style="{StaticResource header}"/>
+                </Grid>
+            </DataTemplate>
+        </Shell.ItemTemplate>
+
+        <shell:Support/>
+    </FlyoutItem>
+    
+    <FlyoutItem Title="Settings">
+        <Shell.ItemTemplate>
+            <DataTemplate>
+                <Grid ColumnDefinitions="auto,*" Padding="15,10" 
+                      ColumnSpacing="20" HeightRequest="50">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroupList>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal" />
+                                <VisualState x:Name="Selected">
+                                    <VisualState.Setters>
+                                        <Setter Property="BackgroundColor" Value="white"/>
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateGroupList>
+                    </VisualStateManager.VisualStateGroups>
+                    <Frame BackgroundColor="#1b1b1e" Grid.ColumnSpan="2" 
+                           Margin="-5" CornerRadius="15"/>
+                    <Image Grid.Column="0" Margin="20,0,0,0" HeightRequest="25" 
+                           Source="settingsIcon.png" VerticalOptions="Center"/>
+                    <Label Text="Settings" Grid.Column="1" VerticalOptions="Center" 
+                           Style="{StaticResource header}"/>
+                </Grid>
+            </DataTemplate>
+        </Shell.ItemTemplate>
+        <shell:Settings/>
+    </FlyoutItem>
+  
+    <Shell.FlyoutHeader>
+        <StackLayout HeightRequest="200" BackgroundColor="BlanchedAlmond"/>
+    </Shell.FlyoutHeader>
+
+    <Shell.FlyoutFooterTemplate>
+        <DataTemplate>
+            <Grid ColumnDefinitions="auto,*" Padding="15,10" 
+                      ColumnSpacing="20" HeightRequest="50">
+                <Frame BackgroundColor="#1b1b1e" Grid.ColumnSpan="2" 
+                           Margin="-5" CornerRadius="15">
+
+                </Frame>
+                <Image Grid.Column="0" Margin="20,0,0,0" HeightRequest="25" 
+                           Source="off.png" VerticalOptions="Center"/>
+                <Label Text="Logout" Grid.Column="1" VerticalOptions="Center" 
+                           Style="{StaticResource header}" TextColor="#fed330"/>
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="logout"/>
+                </Grid.GestureRecognizers>
+            </Grid>
+        </DataTemplate>
+    </Shell.FlyoutFooterTemplate>
     
     
-    <ShellContent Title="Home" Icon="settingsIcon.png" 
-                 ContentTemplate="{DataTemplate shell:HomePage}"/>
-    <ShellContent Title="Trades" Icon="tradeIcon.png" 
-                 ContentTemplate="{DataTemplate shell:Trades}"/>
-    <ShellContent Title="Support" Icon="supportIcon.png" 
-                 ContentTemplate="{DataTemplate shell:Support}"/>
-    <ShellContent Title="Settings" Icon="settingsIcon.png" 
-                 ContentTemplate="{DataTemplate shell:Settings}">
-    </ShellContent>
 </Shell>

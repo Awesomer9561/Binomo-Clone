@@ -16,5 +16,10 @@ namespace Binomo_Clone.Pages
         {
             InitializeComponent();
         }
+
+        private void logout(object sender, EventArgs e)
+        {
+            App.Current.MainPage = new Pages.LoadingScreen();
+        }
     }
 }

@@ -1,9 +1,5 @@
 ﻿using Android.Widget;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -28,7 +24,7 @@ namespace Binomo_Clone.Pages.Shell_Pages
 
         private void openFlyout(object sender, EventArgs e)
         {
-
+            Shell.Current.FlyoutIsPresented = true;
         }
 
         private void activeRedArrow(object sender, EventArgs e)
