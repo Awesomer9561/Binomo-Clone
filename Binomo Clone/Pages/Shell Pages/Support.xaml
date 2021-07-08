@@ -4,23 +4,10 @@
              x:Class="Binomo_Clone.Pages.Shell_Pages.Support"
              BackgroundColor="#1b1b1e"
              Title="Support"
-             Shell.NavBarIsVisible="False">
+             Shell.NavBarIsVisible="True">
     <ContentPage.Content>
         <StackLayout>
-            <!--Header-->
-            <StackLayout Orientation="Horizontal" Style="{StaticResource forground}"
-                         HeightRequest="50">
-                <Image Source="menu" HorizontalOptions="Start" Margin="20,0"
-                       Aspect="AspectFit" HeightRequest="30" >
-                    <Image.GestureRecognizers >
-                        <TapGestureRecognizer Tapped="openFlyout"/>
-                    </Image.GestureRecognizers>
-                </Image>
-
-                <Label Text="Support" FontSize="25" TextColor="White" 
-                       VerticalOptions="Center"/>
-            </StackLayout>
-
+            
             <Grid RowDefinitions="auto,auto,auto,auto,auto,auto,auto" ColumnDefinitions="auto,*" Margin="20" 
                   ColumnSpacing="30">
                 

@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31402.337
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31423.177
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Binomo Clone.Android", "Binomo Clone.Android\Binomo Clone.Android.csproj", "{0677CBB9-762B-4D9B-8B30-DABACFA7CB4F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Binomo Clone.iOS", "Binomo Clone.iOS\Binomo Clone.iOS.csproj", "{AB108D18-F863-4FA8-B41A-35B8F3542B2A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Binomo Clone", "Binomo Clone\Binomo Clone.csproj", "{0EEF1C56-FA6E-451B-A2C2-11508D6420CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Binomo Clone", "Binomo Clone\Binomo Clone.csproj", "{0EEF1C56-FA6E-451B-A2C2-11508D6420CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -13,9 +13,9 @@
 		<item name="colorPrimaryDark">#1b1b1e</item>
 		<!-- colorAccent is used as the default value for colorControlActivated
          which is used to tint widgets -->
-		<item name="colorAccent">#303033</item>
-		<!-- color accent for entry base when focused -->
+		<!--<item name="colorAccent">#303033</item>
+		 color accent for entry base when focused 
 		<item name="colorControlNormal">#303033</item>
-		<!-- color accent for entry base when not focused -->
+		 color accent for entry base when not focused--> 
 	</style>
 </resources>

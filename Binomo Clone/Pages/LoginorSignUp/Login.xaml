@@ -4,6 +4,7 @@
              BackgroundColor="#1b1b1e"
              NavigationPage.HasNavigationBar="True"
              x:Class="Binomo_Clone.Pages.Login"
+             xmlns:custom="clr-namespace:Binomo_Clone.Custom_Renderers"
              Title="Log In">
     
     <ContentPage.Content>
@@ -17,14 +18,14 @@
             <StackLayout Grid.Row="1" VerticalOptions="Center">
                 <Frame Style="{StaticResource normalFrame}" CornerRadius="10" Padding="15,5"
                        Margin="20,0,20,10" HeightRequest="50" VerticalOptions="Center">
-                    <Entry Placeholder="Email" PlaceholderColor="#a4b0be"
+                    <custom:MyEntry Placeholder="Email" PlaceholderColor="#a4b0be"
                            x:Name="email"
                        Keyboard="Email" VerticalOptions="Center"/>
                 </Frame>
                 <Frame Style="{StaticResource normalFrame}" CornerRadius="10" Padding="15,5"
                        Margin="20,0" HeightRequest="50">
-                    <Entry Placeholder="Password" PlaceholderColor="#a4b0be"
-                           x:Name="password"
+                    <custom:MyEntry Placeholder="Password" PlaceholderColor="#a4b0be"
+                           x:Name="password" TextColor="White"
                        IsPassword="True" VerticalOptions="Center"/>
                 </Frame>
             </StackLayout>

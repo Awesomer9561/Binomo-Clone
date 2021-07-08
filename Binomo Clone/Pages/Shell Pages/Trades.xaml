@@ -4,7 +4,7 @@
              x:Class="Binomo_Clone.Pages.Shell_Pages.Trades"
              Title="Trades" BackgroundColor="#1b1b1e"
              NavigationPage.HasNavigationBar="True"
-             Shell.NavBarIsVisible="False">
+             Shell.NavBarIsVisible="True">
 
     <ContentPage.Resources>
         
@@ -12,24 +12,9 @@
     
     <ContentPage.Content>
         <StackLayout>
-
-            <!--Header-->
-            <StackLayout Orientation="Horizontal" Style="{StaticResource forground}"
-                         HeightRequest="50">
-                <Image Source="menu" HorizontalOptions="Start" Margin="20,0"
-                       Aspect="AspectFit" HeightRequest="30" >
-                    <Image.GestureRecognizers >
-                        <TapGestureRecognizer Tapped="openFlyout"/>
-                    </Image.GestureRecognizers>
-                </Image>
-
-                <Label Text="Trades" FontSize="25" TextColor="White" 
-                       VerticalOptions="Center"/>
-            </StackLayout>
-
+            
             <Grid RowDefinitions="50" ColumnDefinitions="*,*" ColumnSpacing="-10"
                   Margin="20,10" x:Name="tradeTabs">
-
 
                 <BoxView HeightRequest="50" Grid.ColumnSpan="2"
                      CornerRadius="15" BackgroundColor="#303033"/>
@@ -72,9 +57,9 @@
                 </StackLayout>
             </ContentView>
 
-            <ScrollView x:Name="CFDView" Margin="20" IsVisible="false">
+            <ScrollView x:Name="CFDView" Margin="20,0" IsVisible="false" 
+                        VerticalScrollBarVisibility="Never">
                 <StackLayout>
-                    
                     <!-- Open trades -->
                     <Label Text="Open trades" HorizontalOptions="Start"
                            Style="{StaticResource header}" FontSize="20"/>

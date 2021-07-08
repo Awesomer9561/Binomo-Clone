@@ -3,11 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:shell="clr-namespace:Binomo_Clone.Pages.Shell_Pages"
              x:Class="Binomo_Clone.Pages.ShellHomePage"
-             FlyoutWidth="300"
+             FlyoutWidth="300" Shell.BackgroundColor="#303033"
              FlyoutBackgroundColor="#1b1b1e">
 
     <Shell.Resources>
         <ResourceDictionary>
+            
         </ResourceDictionary>
     </Shell.Resources>
 
@@ -22,18 +23,26 @@
                                 <VisualState x:Name="Normal" />
                                 <VisualState x:Name="Selected">
                                     <VisualState.Setters>
-                                        <Setter Property="BackgroundColor" Value="white"/>
+                                       <Setter TargetName="HomeFrame"
+                                                Property="Frame.BackgroundColor"
+                                                Value="#303033"/>
+                                        <Setter TargetName="homeIcon"
+                                                Property="Image.Source"
+                                                Value="tradeIconYellow.png"/>
+                                        <Setter TargetName="homeLabel"
+                                                Property="Label.TextColor"
+                                                Value="#f1c40f"/>
                                     </VisualState.Setters>
                                 </VisualState>
                             </VisualStateGroup>
                         </VisualStateGroupList>
                     </VisualStateManager.VisualStateGroups>
                     <Frame BackgroundColor="#1b1b1e" Grid.ColumnSpan="2" 
-                           Margin="-5" CornerRadius="15"/>
+                           Margin="-5" CornerRadius="15" x:Name="HomeFrame"/>
                     <Image Grid.Column="0" Margin="20,0,0,0" HeightRequest="25" 
-                           Source="tradeIcon.png" VerticalOptions="Center"/>
+                           Source="tradeIcon.png" VerticalOptions="Center" x:Name="homeIcon"/>
                     <Label Text="Home" Grid.Column="1" VerticalOptions="Center" 
-                           Style="{StaticResource header}"/>
+                           Style="{StaticResource header}" x:Name="homeLabel"/>
                 </Grid>
             </DataTemplate>
         </Shell.ItemTemplate>
@@ -45,24 +54,36 @@
             <DataTemplate>
                 <Grid ColumnDefinitions="auto,*" Padding="15,10" 
                       ColumnSpacing="20" HeightRequest="50">
+                    <Frame BackgroundColor="#1b1b1e" 
+                           x:Name="TradesFrame" Grid.ColumnSpan="2" 
+                           Margin="-5" CornerRadius="15"/>
+                    <Image Grid.Column="0" Margin="20,0,0,0" HeightRequest="25" 
+                           x:Name="tradeIcon"
+                           Source="tradeIcon.png" VerticalOptions="Center"/>
+                    <Label Text="Trades" Grid.Column="1" 
+                           x:Name="TradeLabel" VerticalOptions="Center" 
+                           Style="{StaticResource header}"/>
+
                     <VisualStateManager.VisualStateGroups>
                         <VisualStateGroupList>
                             <VisualStateGroup x:Name="CommonStates">
                                 <VisualState x:Name="Normal" />
                                 <VisualState x:Name="Selected">
                                     <VisualState.Setters>
-                                        <Setter Property="BackgroundColor" Value="white"/>
+                                        <Setter TargetName="TradesFrame"
+                                                Property="Frame.BackgroundColor"
+                                                Value="#303033"/>
+                                        <Setter TargetName="tradeIcon"
+                                                Property="Image.Source"
+                                                Value="tradeIconYellow.png"/>
+                                        <Setter TargetName="TradeLabel"
+                                                Property="Label.TextColor"
+                                                Value="#f1c40f"/>
                                     </VisualState.Setters>
                                 </VisualState>
                             </VisualStateGroup>
                         </VisualStateGroupList>
                     </VisualStateManager.VisualStateGroups>
-                    <Frame BackgroundColor="#1b1b1e" Grid.ColumnSpan="2" 
-                           Margin="-5" CornerRadius="15"/>
-                    <Image Grid.Column="0" Margin="20,0,0,0" HeightRequest="25" 
-                           Source="tradeIcon.png" VerticalOptions="Center"/>
-                    <Label Text="Trades" Grid.Column="1" VerticalOptions="Center" 
-                           Style="{StaticResource header}"/>
                 </Grid>
             </DataTemplate>
         </Shell.ItemTemplate>
@@ -75,24 +96,36 @@
             <DataTemplate>
                 <Grid ColumnDefinitions="auto,*" Padding="15,10" 
                       ColumnSpacing="20" HeightRequest="50">
+                    <Frame BackgroundColor="#1b1b1e"
+                           x:Name="SupportFrame" Grid.ColumnSpan="2" 
+                           Margin="-5" CornerRadius="15"/>
+                    <Image Grid.Column="0" Margin="20,0,0,0" HeightRequest="25" 
+                           x:Name="supportIcon"
+                           Source="supportIcon.png" VerticalOptions="Center"/>
+                    <Label Text="Support" Grid.Column="1" 
+                           x:Name="SpportLabel" VerticalOptions="Center" 
+                           Style="{StaticResource header}"/>
+
                     <VisualStateManager.VisualStateGroups>
                         <VisualStateGroupList>
                             <VisualStateGroup x:Name="CommonStates">
                                 <VisualState x:Name="Normal" />
                                 <VisualState x:Name="Selected">
                                     <VisualState.Setters>
-                                        <Setter Property="BackgroundColor" Value="white"/>
+                                        <Setter TargetName="SupportFrame"
+                                                Property="Frame.BackgroundColor"
+                                                Value="#303033"/>
+                                        <Setter TargetName="supportIcon"
+                                                Property="Image.Source"
+                                                Value="supportIconYellow.png"/>
+                                        <Setter TargetName="SpportLabel"
+                                                Property="Label.TextColor"
+                                                Value="#f1c40f"/>
                                     </VisualState.Setters>
                                 </VisualState>
                             </VisualStateGroup>
                         </VisualStateGroupList>
                     </VisualStateManager.VisualStateGroups>
-                    <Frame BackgroundColor="#1b1b1e" Grid.ColumnSpan="2" 
-                           Margin="-5" CornerRadius="15"/>
-                    <Image Grid.Column="0" Margin="20,0,0,0" HeightRequest="25" 
-                           Source="supportIcon.png" VerticalOptions="Center"/>
-                    <Label Text="Support" Grid.Column="1" VerticalOptions="Center" 
-                           Style="{StaticResource header}"/>
                 </Grid>
             </DataTemplate>
         </Shell.ItemTemplate>
@@ -105,24 +138,37 @@
             <DataTemplate>
                 <Grid ColumnDefinitions="auto,*" Padding="15,10" 
                       ColumnSpacing="20" HeightRequest="50">
+                    <Frame BackgroundColor="#1b1b1e" 
+                           x:Name="SettingsFrame" Grid.ColumnSpan="2" 
+                           Margin="-5" CornerRadius="15" Padding="0"/>
+
+                    <Image Grid.Column="0" x:Name="settingsIcon" 
+                           Margin="20,0,0,0" HeightRequest="25" 
+                           Source="settingsIcon.png" VerticalOptions="Center"/>
+                    <Label Text="Settings" Grid.Column="1" VerticalOptions="Center" 
+                           Style="{StaticResource header}" x:Name="settingsLabel"/>
+
                     <VisualStateManager.VisualStateGroups>
                         <VisualStateGroupList>
                             <VisualStateGroup x:Name="CommonStates">
                                 <VisualState x:Name="Normal" />
                                 <VisualState x:Name="Selected">
                                     <VisualState.Setters>
-                                        <Setter Property="BackgroundColor" Value="white"/>
+                                        <Setter TargetName="SettingsFrame"
+                                                Property="Frame.BackgroundColor"
+                                                Value="#303033"/>
+                                        <Setter TargetName="settingsIcon"
+                                                Property="Image.Source"
+                                                Value="settingsIconYellow.png"/>
+                                        <Setter TargetName="settingsLabel"
+                                                Property="Label.TextColor"
+                                                Value="#f1c40f"/>
                                     </VisualState.Setters>
                                 </VisualState>
                             </VisualStateGroup>
                         </VisualStateGroupList>
                     </VisualStateManager.VisualStateGroups>
-                    <Frame BackgroundColor="#1b1b1e" Grid.ColumnSpan="2" 
-                           Margin="-5" CornerRadius="15"/>
-                    <Image Grid.Column="0" Margin="20,0,0,0" HeightRequest="25" 
-                           Source="settingsIcon.png" VerticalOptions="Center"/>
-                    <Label Text="Settings" Grid.Column="1" VerticalOptions="Center" 
-                           Style="{StaticResource header}"/>
+
                 </Grid>
             </DataTemplate>
         </Shell.ItemTemplate>
